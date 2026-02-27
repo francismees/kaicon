@@ -30,7 +30,7 @@
    =========================== */
 @font-face {
     font-family: 'Eurostile Extd';
-    src: url('../../Fonts/EUROSTILE EXTD/Eurostile Extd Black.otf') format('opentype');
+    src: url('../assets/fonts/eurostile/eurostile-extd-black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -38,7 +38,7 @@
 
 @font-face {
     font-family: 'Eurostile Extd';
-    src: url('../../Fonts/EUROSTILE EXTD/Eurostile Extd Medium.otf') format('opentype');
+    src: url('../assets/fonts/eurostile/eurostile-extd-medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -46,7 +46,7 @@
 
 @font-face {
     font-family: 'Eurostile Extd';
-    src: url('../../Fonts/EUROSTILE EXTD/Eurostile Extd Regular.otf') format('opentype');
+    src: url('../assets/fonts/eurostile/eurostile-extd-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -54,7 +54,7 @@
 
 @font-face {
     font-family: 'Eurostile Extd';
-    src: url('../../Fonts/EUROSTILE EXTD/Eurostile Extd Regular Italic.otf') format('opentype');
+    src: url('../assets/fonts/eurostile/eurostile-extd-regular-italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -62,7 +62,7 @@
 
 @font-face {
     font-family: 'Eurostile Extd';
-    src: url('../../Fonts/EUROSTILE EXTD/Eurostile Extd Black Italic.otf') format('opentype');
+    src: url('../assets/fonts/eurostile/eurostile-extd-black-italic.woff2') format('woff2');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -70,7 +70,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../Fonts/Satoshi/Satoshi-Light.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -78,7 +78,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../Fonts/Satoshi/Satoshi-Regular.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -86,7 +86,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../Fonts/Satoshi/Satoshi-Medium.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -94,7 +94,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../Fonts/Satoshi/Satoshi-Bold.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -102,7 +102,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../../Fonts/Satoshi/Satoshi-Black.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -110,7 +110,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../Fonts/Satoshi/Satoshi-Italic.otf') format('opentype');
+    src: url('../assets/fonts/satoshi/satoshi-italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
