@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- {{TEMPLATE_PLACEHOLDER}} -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geita Power Station — KAICON | Project Portfolio</title>
+    <meta name="description" content="Power infrastructure · Geita Region, Tanzania project by KAICON delivered in Geita Region, Tanzania." />
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,-25&display=block" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        .project-hero {
+            position: relative;
+            padding: 12rem 0 6rem;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 42, 82, 0.95) 0%, rgba(0, 42, 82, 0.6) 50%, rgba(0, 42, 82, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .project-hero__content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .project-category {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--white);
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-client-name {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+        }
+
+        /* Content Section */
+        .project-content-section {
+            padding: var(--sp-xl) 0;
+            background: var(--white);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .project-article {
+            font-family: var(--font-body);
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .project-article h2 {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .project-article h2:first-child {
+            margin-top: 0;
+        }
+
+        .project-article p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sidebar / Quick Facts */
+        .project-sidebar {
+            background: var(--gypsum);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--grey);
+        }
+
+        .quick-facts-title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--red);
+        }
+
+        .fact-item {
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .fact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .fact-label {
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .fact-label .material-symbols-outlined {
+            font-size: 1.1rem;
+        }
+
+        .fact-value {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        /* Image Gallery Strip */
+        .project-gallery {
+            padding-bottom: var(--sp-xl);
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Next Project Nav */
+        .next-project-banner {
+            background: var(--navy);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .next-project-banner:hover {
+            background: #001f3f;
+            /* Darker navy */
+        }
+
+        .next-project-banner__label {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .next-project-banner__title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 2.2rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .next-project-banner__title .material-symbols-outlined {
+            color: var(--red);
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .next-project-banner:hover .next-project-banner__title .material-symbols-outlined {
+            transform: translateX(10px);
+        }
+
+        @media (max-width: 1023px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .project-sidebar {
+                order: -1;
+                /* Sidebar moves to top on mobile */
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar transparent" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo/kaicon-logo.svg" alt="KAICON"
+                     /></a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="projects.html" class="navbar__link active">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta"><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+            <button class="navbar__toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link">About</a>
+                <a href="services.html" class="navbar__mobile-link">Services</a>
+                <a href="projects.html" class="navbar__mobile-link active">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="project-hero" style="background-image:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1800&q=80');">
+            <div class="project-hero__overlay"></div>
+            <div class="container project-hero__content reveal">
+                <span class="project-category">Industrial</span>
+                <h1 class="project-title">Geita Power Station</h1>
+                <p class="project-client-name">Power infrastructure · Geita Region, Tanzania</p>
+            </div>
+        </section>
+
+        <!-- CONTENT + SIDEBAR -->
+        <section class="project-content-section">
+            <div class="container">
+                <div class="project-grid">
+                    <article class="project-article reveal">
+                        <h2>Project Overview</h2>
+                        <p>A critical energy infrastructure project designed to stabilize the power grid for the mining-heavy Geita region. KAICON served as the primary civil and logistics contractor for the station's development.</p>
+                        <p>Beyond pouring massive generator foundations, we managed the movement of oversized power generation equipment from the port of Dar es Salaam to the remote interior site.</p>
+
+                        <h2>The Challenge</h2>
+                        <p>Transporting 150-ton generator units across 1,000+ kilometers of varied road networks, combined with executing high-precision concrete pours for turbine dampening in extreme weather.</p>
+
+                        <h2>KAICON's Solution & Impact</h2>
+                        <p>KAICON logistics teams conducted extensive route surveys and bridge reinforcements prior to transit. The civil works were completed perfectly to millimeter tolerances, allowing rapid installation of the turbines. The station now powers major mining operations and surrounding communities.</p>
+                    </article>
+
+                    <aside class="project-sidebar reveal reveal-delay-2">
+                        <h3 class="quick-facts-title">Quick Facts</h3>
+
+                        <div class="fact-item">
+                            <span class="fact-label"><span class="material-symbols-outlined">corporate_fare</span>
+                                Client</span>
+                            <span class="fact-value">Confidential Power Consortium</span>
+                        </div>
+
+                        <div class="fact-item">
+                            <span class="fact-label"><span class="material-symbols-outlined">location_on</span>
+                                Location</span>
+                            <span class="fact-value">Geita Region, Tanzania</span>
+                        </div>
+
+                        <div class="fact-item">
+                            <span class="fact-label"><span class="material-symbols-outlined">category</span>
+                                Sector</span>
+                            <span class="fact-value">Energy / Heavy Industrial</span>
+                        </div>
+
+                        <div class="fact-item">
+                            <span class="fact-label"><span class="material-symbols-outlined">handyman</span> Services
+                                Provided</span>
+                            <span class="fact-value">Civil Works, Heavy Equipment Logistics, Camp Management</span>
+                        </div>
+
+                        <div class="fact-item">
+                            <span class="fact-label"><span class="material-symbols-outlined">calendar_today</span>
+                                Completion</span>
+                            <span class="fact-value">2025</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="project-gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="reveal"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80" alt="Project Site" class="gallery-img" />
+                    </div>
+                    <div class="reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1576444356170-66073046b1bc?w=800&q=80" alt="Construction Phase"
+                            class="gallery-img" /></div>
+                    <div class="reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1513828583688-c52646fbef46?w=800&q=80" alt="Completed Work"
+                            class="gallery-img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEXT PROJECT BANNER -->
+        <a href="project-peninsular.html" class="next-project-banner">
+            <div class="container">
+                <span class="next-project-banner__label">Up Next</span>
+                <span class="next-project-banner__title">Peninsular Residence 5895 <span
+                        class="material-symbols-outlined">arrow_forward</span></span>
+            </div>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div><img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider since
+                        2012.</p>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="services.html#minerals" class="footer__link">Industrial &amp; Mineral Supply</a>
+                        </li>
+                        <li><a href="services.html#construction" class="footer__link">Construction Materials</a></li>
+                        <li><a href="services.html#logistics" class="footer__link">Logistics &amp; Support</a></li>
+                        <li><a href="services.html#agri" class="footer__link">Agribusiness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact</h4>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">location_on</span></span><span>Dar es Salaam,
+                            Tanzania</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">mail</span></span><span>info@kaicon.co.tz</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">phone</span></span><span>+255 XXX XXX XXX</span></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>
