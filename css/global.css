@@ -3,12 +3,12 @@
    =========================== */
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined' !important;
-    font-weight: normal;
-    font-style: normal;
+    font-weight: normal !important;
+    font-style: normal !important;
     font-size: 24px;
     line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
+    letter-spacing: normal !important;
+    text-transform: none !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -18,10 +18,11 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    user-select: none;
-    /* Exact variation settings as specified */
+    /* Ligatures MUST be enabled for icon names to render as glyphs */
+    font-feature-settings: 'liga' 1 !important;
+    -webkit-font-feature-settings: 'liga' 1 !important;
     font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' -25, 'opsz' 24 !important;
+    user-select: none;
 }
 
 /* ===========================
