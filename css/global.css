@@ -254,7 +254,7 @@ section {
     font-size: 0.82rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 0.9rem 2.2rem;
+    padding: 1rem 2.2rem 0.8rem;
     border-radius: var(--radius);
     transition: transform var(--trans-fast), box-shadow var(--trans-fast), background var(--trans-fast);
     cursor: pointer;
