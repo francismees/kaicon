@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAICON — Integrated Infrastructure & Industrial Solutions | East Africa</title>
+    <meta name="description"
+        content="KAICON is East Africa's premier integrated infrastructure, industrial supply, and logistics company. Fostering development and empowering industries across Tanzania, Burundi, South Sudan, and Angola." />
+    <meta property="og:title" content="KAICON — Fostering Development & Empowering Industries" />
+    <meta property="og:description"
+        content="East Africa's premier integrated contractor and solutions provider since 2012." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,-25&display=block" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        /* ── HOME-SPECIFIC ────────────────── */
+
+        /* HERO */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero__bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80') center/cover no-repeat;
+            animation: kenburns 22s ease-in-out infinite alternate;
+        }
+
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, rgba(0, 42, 82, 0.93) 0%, rgba(0, 59, 113, 0.72) 55%, rgba(206, 14, 45, 0.18) 100%);
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding-top: calc(var(--nav-h) + 3rem);
+            padding-bottom: 6rem;
+            max-width: 780px;
+        }
+
+        .hero__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-heading);
+            font-weight: 400;
+            font-size: 0.72rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2rem, 3.8vw, 3.6rem);
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            line-height: 0.98;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__title-red {
+            color: var(--red);
+        }
+
+        .hero__sub {
+            font-family: var(--font-body);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 52ch;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero__ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero__scroll {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+
+        .hero__scroll-text {
+            font-family: var(--font-heading);
+            font-size: 0.62rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .hero__scroll-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+            animation: scrollLine 1.8s ease-in-out infinite;
+        }
+
+        @keyframes scrollLine {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scaleY(0.6);
+            }
+        }
+
+        /* STATS BAND */
+        .stats-band {
+            background: var(--navy-dark);
+        }
+
+        /* ABOUT SNAPSHOT */
+        .about-snapshot {
+            padding: var(--sp-xl) 0;
+            background: var(--white);
+        }
+
+        .about-snapshot__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-lg);
+            align-items: center;
+        }
+
+        .about-snapshot__timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: var(--sp-md);
+            gap: 0;
+            border: 1px solid var(--grey);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .about-snap-milestone {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-right: 1px solid var(--grey);
+        }
+
+        .about-snap-milestone:last-child {
+            border-right: none;
+        }
+
+        .about-snap-milestone__year {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--red);
+            letter-spacing: 0.03em;
+        }
+
+        .about-snap-milestone__label {
+            font-family: var(--font-heading);
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin: 0.3rem 0 0.5rem;
+        }
+
+        .about-snap-milestone__text {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .about-snapshot__img-wrap {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .about-snapshot__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-snapshot__img-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            background: var(--red);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+        }
+
+        .about-snapshot__img-badge-num {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .about-snapshot__img-badge-label {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.80);
+            margin-top: 0.2rem;
+        }
+
+        /* STRATEGIC PILLARS */
+        .pillars-section {
+            background: var(--gypsum);
+            padding: var(--sp-xl) 0;
+        }
+
+        .pillars-section__header {
+            text-align: center;
+            margin-bottom: var(--sp-lg);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        /* WHY KAICON */
+        .why-section {
+            position: relative;
+            padding: var(--sp-xl) 0;
+            overflow: hidden;
+        }
+
+        .why-section__bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80') center/cover no-repeat;
+        }
+
+        .why-section__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 42, 82, 0.95) 0%, rgba(0, 59, 113, 0.85) 100%);
+        }
+
+        .why-section__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-section__header {
+            text-align: center;
+            margin-bottom: var(--sp-lg);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--sp-sm);
+        }
+
+        /* FEATURED PROJECTS */
+        .featured-projects {
+            padding: var(--sp-xl) 0;
+            background: var(--white);
+        }
+
+        .featured-projects__header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: var(--sp-lg);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* ── RESPONSIVE ────────────────── */
+        @media (max-width: 1023px) {
+            .about-snapshot__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-snapshot__timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-snap-milestone:nth-child(2) {
+                border-right: none;
+            }
+
+            .about-snap-milestone:nth-child(3) {
+                border-right: 1px solid var(--grey);
+                border-top: 1px solid var(--grey);
+            }
+
+            .about-snap-milestone:nth-child(4) {
+                border-top: 1px solid var(--grey);
+                border-right: none;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillar-card+.pillar-card::before {
+                display: none;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: var(--sp-sm);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 599px) {
+            .about-snapshot__timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .about-snap-milestone {
+                border-right: none;
+                border-bottom: 1px solid var(--grey);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero__ctas {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ═══════════════════════════════════════ -->
+    <nav class="navbar transparent">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo" aria-label="KAICON Home">
+                <img src="assets/logo/kaicon-logo.svg" alt="KAICON" style="filter:brightness(0) invert(1);" />
+            </a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="projects.html" class="navbar__link">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+            <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link">About</a>
+                <a href="services.html" class="navbar__mobile-link">Services</a>
+                <a href="projects.html" class="navbar__mobile-link">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- ══ HERO ═════════════════════════════════════════ -->
+        <section class="hero-section" aria-label="Hero">
+            <div class="hero__bg"></div>
+            <div class="hero__overlay"></div>
+            <div class="container">
+                <div class="hero__content">
+                    <span class="hero__eyebrow">East & Central Africa</span>
+                    <h1 class="hero__title">
+                        Fostering<br>
+                        <span class="hero__title-red">Development</span><br>
+                        &amp; Empowering<br>Industries
+                    </h1>
+                    <p class="hero__sub">Integrated infrastructure, industrial supply, and logistics solutions for East
+                        Africa's most complex projects. One partner. End-to-end capability.</p>
+                    <div class="hero__ctas">
+                        <a href="services.html" class="btn btn-primary btn-arrow">Explore Capabilities</a>
+                        <a href="projects.html" class="btn btn-outline">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll" aria-hidden="true">
+                <span class="hero__scroll-text">Scroll</span>
+                <span class="hero__scroll-line"></span>
+            </div>
+        </section>
+
+        <!-- ══ STATS BAND ══════════════════════════════════ -->
+        <div class="stats-band">
+            <div class="container">
+                <div class="stats-strip">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10" data-suffix="+">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4" data-suffix="">4</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15" data-prefix="USD " data-suffix="M+">USD 15M+</span>
+                        <span class="stat-label">Fertilizer Contracts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10" data-prefix="TZS " data-suffix="B+">TZS 10B+</span>
+                        <span class="stat-label">Annual Revenue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ ABOUT SNAPSHOT ══════════════════════════════ -->
+        <section class="about-snapshot">
+            <div class="container">
+                <div class="about-snapshot__grid">
+                    <div>
+                        <div class="heading-block reveal">
+                            <span class="section-label">Who We Are</span>
+                            <h2 class="section-title">About <span>KAICON</span></h2>
+                        </div>
+                        <p class="section-intro reveal reveal-delay-1">KAICON is a diversified supply and services
+                            company specializing in the provision of industrial raw materials, semi-processed minerals,
+                            construction inputs, agribusiness commodities, logistics solutions, and auxiliary project
+                            support services across East Africa and beyond.</p>
+                        <p style="margin-top:1rem;font-size:0.95rem;color:#555;line-height:1.7;"
+                            class="reveal reveal-delay-2">From a specialized trading company in 2012 to a dynamic,
+                            integrated contractor operating across four countries — KAICON has grown into one of East
+                            Africa's most capable project partners.</p>
+                        <div class="about-snapshot__timeline reveal reveal-delay-3">
+                            <div class="about-snap-milestone">
+                                <div class="about-snap-milestone__year">2012</div>
+                                <div class="about-snap-milestone__label">Founded</div>
+                                <div class="about-snap-milestone__text">Specialized trading in building materials &
+                                    logistics</div>
+                            </div>
+                            <div class="about-snap-milestone">
+                                <div class="about-snap-milestone__year">2015</div>
+                                <div class="about-snap-milestone__label">Regional Power</div>
+                                <div class="about-snap-milestone__text">Evolved into a regional commodities powerhouse
+                                </div>
+                            </div>
+                            <div class="about-snap-milestone">
+                                <div class="about-snap-milestone__year">2018</div>
+                                <div class="about-snap-milestone__label">Expansion</div>
+                                <div class="about-snap-milestone__text">Expanded into infrastructure & civil works</div>
+                            </div>
+                            <div class="about-snap-milestone">
+                                <div class="about-snap-milestone__year">Today</div>
+                                <div class="about-snap-milestone__label">Integrated</div>
+                                <div class="about-snap-milestone__text">Pan-African contractor & solutions provider
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:2rem;" class="reveal reveal-delay-4">
+                            <a href="about.html" class="btn btn-ghost btn-arrow">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="about-snapshot__img-wrap">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
+                                alt="KAICON Construction operations" class="about-snapshot__img" />
+                            <div class="about-snapshot__img-badge">
+                                <div class="about-snapshot__img-badge-num">10+</div>
+                                <div class="about-snapshot__img-badge-label">Years of Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STRATEGIC PILLARS ════════════════════════════ -->
+        <section class="pillars-section">
+            <div class="container">
+                <div class="pillars-section__header">
+                    <div class="heading-block reveal"
+                        style="border-left:none; padding-left:0; display:inline-block; text-align:center;">
+                        <span class="section-label">What We Do</span>
+                        <h2 class="section-title">Strategic <span>Pillars</span></h2>
+                    </div>
+                    <p class="section-intro reveal reveal-delay-1" style="margin: 0.75rem auto 0; text-align:center;">
+                        KAICON operates at the intersection of three complementary sectors, supporting clients
+                        throughout the entire project lifecycle.</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card reveal">
+                        <div class="num-circle pillar-card__num">01</div>
+                        <div class="pillar-card__sublabel">The Raw Backbone</div>
+                        <h3 class="pillar-card__title">Industrial &amp; Mineral Supply</h3>
+                        <p class="pillar-card__text">Sourcing and delivering critical minerals and chemical inputs that
+                            power manufacturing and heavy industry across the region.</p>
+                        <div style="margin-top:1.5rem;">
+                            <a href="services.html#minerals" class="btn btn-ghost btn-arrow"
+                                style="font-size:0.72rem;padding:0.65rem 1.2rem;">Explore</a>
+                        </div>
+                    </div>
+                    <div class="pillar-card reveal reveal-delay-2">
+                        <div class="num-circle pillar-card__num">02</div>
+                        <div class="pillar-card__sublabel">The Execution Arm</div>
+                        <h3 class="pillar-card__title">Infrastructure &amp; Construction</h3>
+                        <p class="pillar-card__text">Delivering complex civil works materials for commercial buildings
+                            and industrial facilities with precision and quality assurance.</p>
+                        <div style="margin-top:1.5rem;">
+                            <a href="services.html#construction" class="btn btn-ghost btn-arrow"
+                                style="font-size:0.72rem;padding:0.65rem 1.2rem;">Explore</a>
+                        </div>
+                    </div>
+                    <div class="pillar-card reveal reveal-delay-3">
+                        <div class="num-circle pillar-card__num">03</div>
+                        <div class="pillar-card__sublabel">The Enabler</div>
+                        <h3 class="pillar-card__title">Logistics &amp; Project Support</h3>
+                        <p class="pillar-card__text">Providing specialized logistics, fuel, and human capital to keep
+                            remote and large-scale sites fully operational.</p>
+                        <div style="margin-top:1.5rem;">
+                            <a href="services.html#logistics" class="btn btn-ghost btn-arrow"
+                                style="font-size:0.72rem;padding:0.65rem 1.2rem;">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ WHY KAICON ══════════════════════════════════ -->
+        <section class="why-section">
+            <div class="why-section__bg"></div>
+            <div class="why-section__overlay"></div>
+            <div class="why-section__content">
+                <div class="container">
+                    <div class="why-section__header">
+                        <span class="section-label" style="color:rgba(255,255,255,0.55);">Why Choose Us</span>
+                        <h2 class="section-title section-title--white reveal">Why <span>KAICON?</span></h2>
+                    </div>
+                    <div class="why-grid">
+                        <div class="value-card value-card--navy reveal">
+                            <div class="value-card__num">01</div>
+                            <div class="value-card__title">Advantage One</div>
+                            <div class="value-card__name">Diverse Capability</div>
+                            <p class="value-card__text">From sourcing gypsum to building data centers — a single point
+                                of accountability for complex, multi-disciplinary projects.</p>
+                        </div>
+                        <div class="value-card value-card--red reveal reveal-delay-2">
+                            <div class="value-card__num">02</div>
+                            <div class="value-card__title">Advantage Two</div>
+                            <div class="value-card__name">Financial Strength</div>
+                            <p class="value-card__text">Proven track record of multi-million dollar supply contracts
+                                with the financial stability to handle large-scale operations.</p>
+                        </div>
+                        <div class="value-card value-card--navy reveal reveal-delay-3">
+                            <div class="value-card__num">03</div>
+                            <div class="value-card__title">Advantage Three</div>
+                            <div class="value-card__name">Regional Reach</div>
+                            <p class="value-card__text">Operations extending beyond Tanzania to Burundi, South Sudan,
+                                and Angola — a true Pan-African partner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FEATURED PROJECTS ════════════════════════════ -->
+        <section class="featured-projects">
+            <div class="container">
+                <div class="featured-projects__header">
+                    <div>
+                        <div class="heading-block reveal">
+                            <span class="section-label">Our Portfolio</span>
+                            <h2 class="section-title">Featured <span>Projects</span></h2>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="btn btn-navy btn-arrow reveal">View All Projects</a>
+                </div>
+                <div class="projects-grid">
+                    <div class="reveal">
+                        <div class="project-card" data-category="government">
+                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80"
+                                alt="NIDA Data Centers" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body">
+                                <span class="project-card__tag">Government</span>
+                                <h3 class="project-card__title">NIDA Data Centers</h3>
+                                <p class="project-card__client">National Identification Authority — Dar es Salaam,
+                                    Arusha, Mwanza</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="project-card" data-category="commercial">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+                                alt="Peninsular Residence 5895" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body">
+                                <span class="project-card__tag">Commercial</span>
+                                <h3 class="project-card__title">Peninsular Residence 5895</h3>
+                                <p class="project-card__client">7-Story Luxury Apartments — Oysterbay, Dar es Salaam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="project-card" data-category="industrial">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80"
+                                alt="Iringa Modern Market" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body">
+                                <span class="project-card__tag">Industrial</span>
+                                <h3 class="project-card__title">Iringa Modern Market</h3>
+                                <p class="project-card__client">Iringa Municipal Council — Multi-story urban market</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CTA BAND ════════════════════════════════════ -->
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__inner">
+                    <div>
+                        <h2 class="cta-band__title">Ready to Build the Future?</h2>
+                        <p class="cta-band__sub">Let's discuss your next project. Our team is ready to deliver.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-arrow">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ══ FOOTER ══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider,
+                        delivering world-class infrastructure, supply, and logistics services since 2012.</p>
+                    <div class="footer__countries" style="margin-top:1.5rem;">
+                        <span class="footer__country-tag">Tanzania</span>
+                        <span class="footer__country-tag">Burundi</span>
+                        <span class="footer__country-tag">South Sudan</span>
+                        <span class="footer__country-tag">Angola</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Operational Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Our Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="services.html#minerals" class="footer__link">Industrial &amp; Mineral Supply</a>
+                        </li>
+                        <li><a href="services.html#construction" class="footer__link">Infrastructure &amp;
+                                Construction</a></li>
+                        <li><a href="services.html#logistics" class="footer__link">Logistics &amp; Project Support</a>
+                        </li>
+                        <li><a href="services.html#agri" class="footer__link">Agribusiness &amp; Commodities</a></li>
+                        <li><a href="services.html#labor" class="footer__link">Labor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact Us</h4>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">location_on</span></span>
+                        <span>Dar es Salaam, Tanzania</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon"><span class="material-symbols-outlined">mail</span></span>
+                        <span>info@kaicon.co.tz</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-icon"><span class="material-symbols-outlined">phone</span></span>
+                        <span>+255 XXX XXX XXX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+                <p class="footer__copy">Designed with excellence &amp; integrity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — KAICON | Industrial Supply, Construction & Logistics</title>
+    <meta name="description"
+        content="Explore KAICON's three strategic pillars: Industrial & Mineral Supply, Infrastructure & Construction, and Logistics & Project Support." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        .service-detail {
+            padding: var(--sp-xl) 0;
+        }
+
+        .service-detail:nth-child(even) {
+            background: var(--gypsum);
+        }
+
+        .service-detail__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-lg);
+            align-items: start;
+        }
+
+        .service-detail--reverse .service-detail__grid {
+            direction: rtl;
+        }
+
+        .service-detail--reverse .service-detail__grid>* {
+            direction: ltr;
+        }
+
+        .service-detail__img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin-top: 1.25rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .service-item::before {
+            content: '▪';
+            color: var(--red);
+            font-size: 0.7rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .services-overview {
+            padding: var(--sp-xl) 0;
+            background: var(--gypsum);
+        }
+
+        .overview-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .services-stats {
+            background: var(--navy);
+            padding: var(--sp-lg) 0;
+        }
+
+        @media (max-width:1023px) {
+            .overview-pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .service-detail__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-detail--reverse .service-detail__grid {
+                direction: ltr;
+            }
+
+            .service-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar solid">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo/kaicon-logo.svg" alt="KAICON"
+                    style="filter:brightness(0) invert(1);" /></a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link active">Services</a></li>
+                <li><a href="projects.html" class="navbar__link">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta"><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+            <button class="navbar__toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link">About</a>
+                <a href="services.html" class="navbar__mobile-link active">Services</a>
+                <a href="projects.html" class="navbar__mobile-link">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero__bg"
+                style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80');">
+            </div>
+            <div class="page-hero__overlay"></div>
+            <div class="container page-hero__content">
+                <span class="page-hero__eyebrow">What We Deliver</span>
+                <h1 class="page-hero__title">Comprehensive <span>Expertise</span></h1>
+                <p class="page-hero__subtitle">Three integrated pillars delivering end-to-end project solutions across
+                    East &amp; Central Africa.</p>
+            </div>
+        </section>
+
+        <!-- PILLARS OVERVIEW -->
+        <section class="services-overview">
+            <div class="container">
+                <div style="text-align:center;margin-bottom:var(--sp-lg);">
+                    <span class="section-label">Our Services</span>
+                    <h2 class="section-title reveal">Strategic <span>Pillars</span></h2>
+                </div>
+                <div class="overview-pillars">
+                    <div class="pillar-card reveal">
+                        <div class="num-circle pillar-card__num">01</div>
+                        <div class="pillar-card__sublabel">The Raw Backbone</div>
+                        <h3 class="pillar-card__title">Industrial &amp; Mineral Supply</h3>
+                        <p class="pillar-card__text">Sourcing and delivering critical minerals and chemical inputs that
+                            power manufacturing and heavy industry.</p>
+                    </div>
+                    <div class="pillar-card reveal reveal-delay-2">
+                        <div class="num-circle pillar-card__num">02</div>
+                        <div class="pillar-card__sublabel">The Execution Arm</div>
+                        <h3 class="pillar-card__title">Infrastructure &amp; Construction</h3>
+                        <p class="pillar-card__text">Delivering complex civil works materials for commercial,
+                            government, and industrial facilities.</p>
+                    </div>
+                    <div class="pillar-card reveal reveal-delay-3">
+                        <div class="num-circle pillar-card__num">03</div>
+                        <div class="pillar-card__sublabel">The Enabler</div>
+                        <h3 class="pillar-card__title">Logistics &amp; Project Support</h3>
+                        <p class="pillar-card__text">Specialized logistics, fuel, and human capital to keep remote and
+                            large-scale sites operational.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PILLAR 1: MINERALS -->
+        <section class="service-detail" id="minerals">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Pillar 01 — The Raw
+                                Backbone</span>
+                            <h2 class="section-title">Industrial &amp; <span>Mineral Supply</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;">
+                            Strategic sourcing and reliable delivery of critical minerals and industrial inputs that
+                            form the backbone of manufacturing and heavy industry across the region.</p>
+                        <p style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:0.75rem;"
+                            class="reveal reveal-delay-2">Core Minerals</p>
+                        <div class="service-items reveal reveal-delay-2">
+                            <div class="service-item">Gypsum</div>
+                            <div class="service-item">Manganese</div>
+                            <div class="service-item">Iron Ore</div>
+                            <div class="service-item">Coal</div>
+                            <div class="service-item">Clinker</div>
+                            <div class="service-item">Limestone</div>
+                            <div class="service-item">Quartz</div>
+                            <div class="service-item">Feldspar</div>
+                        </div>
+                        <p style="font-family:var(--font-heading);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin:1.25rem 0 0.75rem;"
+                            class="reveal reveal-delay-3">Specialized Inputs</p>
+                        <div class="service-items reveal reveal-delay-3">
+                            <div class="service-item">Calcitic Lime</div>
+                            <div class="service-item">Magnesite</div>
+                            <div class="service-item">White Soapstone</div>
+                            <div class="service-item">Coltan</div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2"><img
+                            src="https://images.unsplash.com/photo-1505409859467-3a796fd5798e?w=900&q=80"
+                            alt="Industrial minerals" class="service-detail__img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AGRI -->
+        <section class="service-detail" id="agri">
+            <div class="container">
+                <div class="service-detail__grid service-detail--reverse">
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Commodity Trading</span>
+                            <h2 class="section-title">Agribusiness &amp; <span>Commodities</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;">
+                            Proven track record in food security and agro-industrial supply — including a USD 15M
+                            fertilizer supply contract and USD 1.2M sugar supply to Burundi.</p>
+                        <div class="service-items reveal reveal-delay-2">
+                            <div class="service-item">Sugar</div>
+                            <div class="service-item">Maize</div>
+                            <div class="service-item">Rice</div>
+                            <div class="service-item">Wheat Flour</div>
+                            <div class="service-item">NPK Fertilizers</div>
+                            <div class="service-item">Urea</div>
+                            <div class="service-item">DAP</div>
+                            <div class="service-item">CAN Fertilizers</div>
+                        </div>
+                    </div>
+                    <div class="reveal"><img
+                            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80"
+                            alt="Agribusiness" class="service-detail__img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONSTRUCTION MATERIALS -->
+        <section class="service-detail" id="construction">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Pillar 02 — The Execution
+                                Arm</span>
+                            <h2 class="section-title">Construction <span>Materials</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;">Tier
+                            1 supplier of construction inputs — from bulk cement and steel reinforcement to high-grade
+                            limestone products for the most demanding structural projects.</p>
+                        <div class="service-items reveal reveal-delay-2">
+                            <div class="service-item">Bulk Cement</div>
+                            <div class="service-item">Aggregates</div>
+                            <div class="service-item">Steel Reinforcement</div>
+                            <div class="service-item">High-grade Limestone</div>
+                            <div class="service-item">Heavy Machinery Lubricants</div>
+                            <div class="service-item">Industrial Tyres</div>
+                            <div class="service-item">Machine Tools</div>
+                            <div class="service-item">Processing Chemicals</div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2"><img
+                            src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=900&q=80"
+                            alt="Construction materials" class="service-detail__img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS -->
+        <section class="service-detail" id="logistics">
+            <div class="container">
+                <div class="service-detail__grid service-detail--reverse">
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Pillar 03 — The Enabler</span>
+                            <h2 class="section-title">Logistics &amp; <span>Project Support</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;">
+                            Cross-border connectivity and site enablement — keeping remote and large-scale sites fully
+                            operational with integrated transport, equipment hire, and support services.</p>
+                        <div class="service-items reveal reveal-delay-2">
+                            <div class="service-item">Bulk Mineral Transport</div>
+                            <div class="service-item">Construction Site Logistics</div>
+                            <div class="service-item">Excavator Hire</div>
+                            <div class="service-item">Grader &amp; Crane Hire</div>
+                            <div class="service-item">Mobile Fuel (42,000L tanks)</div>
+                            <div class="service-item">Extra Fuel Storage</div>
+                            <div class="service-item">Mobile Ablution Units</div>
+                            <div class="service-item">Camp Management</div>
+                        </div>
+                    </div>
+                    <div class="reveal"><img
+                            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80"
+                            alt="Logistics" class="service-detail__img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LABOR MANAGEMENT -->
+        <section class="service-detail" id="labor">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Human Capital</span>
+                            <h2 class="section-title">Labor <span>Management</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;">
+                            Comprehensive workforce solutions ensuring project sites are staffed with the right people,
+                            managed to the highest compliance and efficiency standards.</p>
+                        <div class="service-items reveal reveal-delay-2">
+                            <div class="service-item">Skilled Labor Supply</div>
+                            <div class="service-item">Casual Labor Deployment</div>
+                            <div class="service-item">Workforce Mobilization</div>
+                            <div class="service-item">Automated Time &amp; Attendance</div>
+                            <div class="service-item">Training &amp; Compliance</div>
+                            <div class="service-item">Site Administration</div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2"><img
+                            src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=80"
+                            alt="Labor management" class="service-detail__img" /></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="services-stats">
+            <div class="container">
+                <div class="stats-strip">
+                    <div class="stat-item"><span class="stat-number" data-target="15" data-prefix="USD "
+                            data-suffix="M+">USD 15M+</span><span class="stat-label">Fertilizer Contracts</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="10" data-suffix="+">10+</span><span
+                            class="stat-label">Years Experience</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="4">4</span><span
+                            class="stat-label">Countries</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="10" data-prefix="TZS "
+                            data-suffix="B+">TZS 10B+</span><span class="stat-label">Annual Revenue</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__inner">
+                    <div>
+                        <h2 class="cta-band__title">Downtime Is Not an Option.</h2>
+                        <p class="cta-band__sub">Contact us to discuss your requirements.</p>
+                    </div><a href="contact.html" class="btn btn-outline btn-arrow">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div><img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider since
+                        2012.</p>
+                    <div class="footer__countries" style="margin-top:1.5rem;"><span
+                            class="footer__country-tag">Tanzania</span><span
+                            class="footer__country-tag">Burundi</span><span class="footer__country-tag">South
+                            Sudan</span><span class="footer__country-tag">Angola</span></div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="#minerals" class="footer__link">Industrial &amp; Mineral Supply</a></li>
+                        <li><a href="#construction" class="footer__link">Construction Materials</a></li>
+                        <li><a href="#logistics" class="footer__link">Logistics &amp; Support</a></li>
+                        <li><a href="#agri" class="footer__link">Agribusiness</a></li>
+                        <li><a href="#labor" class="footer__link">Labor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact</h4>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">location_on</span></span><span>Dar es Salaam,
+                            Tanzania</span></div>
+                    <div class="footer__contact-item"><span
+                            class="footer__contact-icon"><span class="material-symbols-outlined">mail</span></span><span>info@kaicon.co.tz</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">phone</span></span><span>+255 XXX XXX
+                            XXX</span></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+                <p class="footer__copy">Designed with excellence &amp; integrity.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+
+</html>

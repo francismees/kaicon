@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — KAICON | East Africa's Premier Infrastructure Partner</title>
+    <meta name="description"
+        content="Learn about KAICON's journey from 2012 to becoming East Africa's integrated infrastructure and industrial solutions partner. Our vision, mission, and core values." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        /* VISION / MISSION / VALUES */
+        .vmv-section {
+            background: var(--white);
+            padding: var(--sp-xl) 0;
+        }
+
+        .vmv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .vmv-panel {
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vmv-panel--navy {
+            background: var(--navy);
+        }
+
+        .vmv-panel--red {
+            background: var(--red);
+        }
+
+        .vmv-panel--white {
+            background: var(--white);
+            border: 1px solid var(--grey);
+            border-left: none;
+        }
+
+        .vmv-panel__icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.85;
+        }
+
+        .vmv-panel__label {
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 0.5rem;
+        }
+
+        .vmv-panel--white .vmv-panel__label {
+            color: var(--red);
+        }
+
+        .vmv-panel__title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+        }
+
+        .vmv-panel--white .vmv-panel__title {
+            color: var(--navy);
+        }
+
+        .vmv-panel__text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.75;
+        }
+
+        .vmv-panel--white .vmv-panel__text {
+            color: #555;
+        }
+
+        /* VALUES LIST */
+        .core-values-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .core-value-item {}
+
+        .core-value-item__name {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 0.88rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .core-value-item__name::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--red);
+            flex-shrink: 0;
+        }
+
+        .core-value-item__text {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.6;
+            padding-left: 1.1rem;
+        }
+
+        /* OVERVIEW */
+        .overview-section {
+            padding: var(--sp-xl) 0;
+            background: var(--gypsum);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-lg);
+            align-items: center;
+        }
+
+        .overview-img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* TIMELINE SECTION */
+        .timeline-section {
+            padding: var(--sp-xl) 0;
+            background: var(--white);
+        }
+
+        /* VENN SECTION */
+        .venn-section {
+            padding: var(--sp-xl) 0;
+            background: var(--navy);
+        }
+
+        .venn-section__header {
+            text-align: center;
+            margin-bottom: var(--sp-lg);
+        }
+
+        .venn-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .venn-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: background var(--trans-normal), transform var(--trans-normal);
+        }
+
+        .venn-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .venn-card__icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .venn-card__title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .venn-card__text {
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.65;
+        }
+
+        /* PEOPLE */
+        .people-section {
+            padding: var(--sp-xl) 0;
+            background: var(--gypsum);
+        }
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-lg);
+            align-items: center;
+        }
+
+        @media (max-width: 1023px) {
+            .vmv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vmv-panel--white {
+                border-left: 1px solid var(--grey);
+                border-top: none;
+            }
+
+            .overview-grid,
+            .people-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .venn-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .vmv-panel {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar solid">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo/kaicon-logo.svg" alt="KAICON"
+                    style="filter:brightness(0) invert(1);" /></a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link active">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="projects.html" class="navbar__link">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta"><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+            <button class="navbar__toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link active">About</a>
+                <a href="services.html" class="navbar__mobile-link">Services</a>
+                <a href="projects.html" class="navbar__mobile-link">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero__bg"
+                style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80');">
+            </div>
+            <div class="page-hero__overlay"></div>
+            <div class="container page-hero__content">
+                <span class="page-hero__eyebrow">Our Story</span>
+                <h1 class="page-hero__title">About <span>KAICON</span></h1>
+                <p class="page-hero__subtitle">From a specialized trading company in 2012 to East Africa's premier
+                    integrated contractor and solutions provider.</p>
+            </div>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="overview-section">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
+                            alt="KAICON operations" class="overview-img" />
+                    </div>
+                    <div>
+                        <div class="heading-block reveal">
+                            <span class="section-label">Company Overview</span>
+                            <h2 class="section-title">Who <span>We Are</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1rem;">KAICON
+                            is a diversified supply and services company specializing in the provision of industrial raw
+                            materials, semi-processed minerals, construction inputs, agribusiness commodities, logistics
+                            solutions, and auxiliary project support services across East Africa and beyond.</p>
+                        <p class="reveal reveal-delay-2" style="color:#555;line-height:1.75;margin-bottom:1.5rem;">A
+                            Tanzanian company at heart, KAICON prioritizes local employment and skills transfer while
+                            maintaining global delivery standards. Our team of engineers, project managers, logistics
+                            experts, and skilled artisans delivers world-class outcomes on every engagement.</p>
+                        <div class="stats-strip reveal reveal-delay-3"
+                            style="background:var(--navy);border-radius:var(--radius);">
+                            <div class="stat-item"><span class="stat-number" data-target="10"
+                                    data-suffix="+">10+</span><span class="stat-label">Years</span></div>
+                            <div class="stat-item"><span class="stat-number" data-target="4">4</span><span
+                                    class="stat-label">Countries</span></div>
+                            <div class="stat-item"><span class="stat-number" data-target="15" data-prefix="$"
+                                    data-suffix="M+">$15M+</span><span class="stat-label">Contracts</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISION / MISSION / VALUES -->
+        <section class="vmv-section">
+            <div class="container">
+                <div class="vmv-grid">
+                    <div class="vmv-panel vmv-panel--navy reveal">
+                        <div class="vmv-panel__icon"><span class="material-symbols-outlined">visibility</span></div>
+                        <div class="vmv-panel__label">Our Direction</div>
+                        <div class="vmv-panel__title">Vision</div>
+                        <p class="vmv-panel__text">To be the premier integrated infrastructure and industrial partner in
+                            Africa, driving economic growth through sustainable construction, reliable resource supply,
+                            and operational excellence.</p>
+                    </div>
+                    <div class="vmv-panel vmv-panel--red reveal reveal-delay-2">
+                        <div class="vmv-panel__icon"><span class="material-symbols-outlined">gps_fixed</span></div>
+                        <div class="vmv-panel__label">Our Purpose</div>
+                        <div class="vmv-panel__title">Mission</div>
+                        <p class="vmv-panel__text">To deliver consistent, world-class value by providing efficient,
+                            scalable, and sustainable solutions tailored to the complex operational needs of our
+                            clients.</p>
+                    </div>
+                    <div class="vmv-panel vmv-panel--white reveal reveal-delay-3">
+                        <div class="vmv-panel__icon" style="filter:grayscale(1)"><span class="material-symbols-outlined">settings</span></div>
+                        <div class="vmv-panel__label">Our Foundation</div>
+                        <div class="vmv-panel__title">Core Values</div>
+                        <div class="core-values-list">
+                            <div class="core-value-item">
+                                <div class="core-value-item__name">Excellence</div>
+                                <p class="core-value-item__text">We refuse to compromise. Every project executed to
+                                    world-class standards.</p>
+                            </div>
+                            <div class="core-value-item">
+                                <div class="core-value-item__name">Reliability</div>
+                                <p class="core-value-item__text">We deliver. On time. Every time. Regardless of scale or
+                                    location.</p>
+                            </div>
+                            <div class="core-value-item">
+                                <div class="core-value-item__name">Integrity</div>
+                                <p class="core-value-item__text">Building trust as firmly as structures. Transparency
+                                    and ethics are our bedrock.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="timeline-section">
+            <div class="container">
+                <div class="heading-block reveal" style="text-align:center;border-left:none;padding-left:0;">
+                    <span class="section-label">Our History</span>
+                    <h2 class="section-title">Our <span>Journey</span></h2>
+                </div>
+                <div style="margin-top:var(--sp-lg);">
+                    <div class="timeline reveal">
+                        <div class="timeline-item">
+                            <div class="timeline-item__dot"></div>
+                            <div class="timeline-item__year">2012</div>
+                            <div class="timeline-item__label">Foundation</div>
+                            <p class="timeline-item__text">Specialized trading in building materials and industrial
+                                logistics in Tanzania.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-item__dot"></div>
+                            <div class="timeline-item__year">2015</div>
+                            <div class="timeline-item__label">Regional Powerhouse</div>
+                            <p class="timeline-item__text">Evolved into a regional logistics and commodities powerhouse
+                                with cross-border capability.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-item__dot"></div>
+                            <div class="timeline-item__year">2018</div>
+                            <div class="timeline-item__label">Expansion</div>
+                            <p class="timeline-item__text">Expanded capabilities into infrastructure construction and
+                                civil works.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-item__dot"></div>
+                            <div class="timeline-item__year">Today</div>
+                            <div class="timeline-item__label">Integrated Provider</div>
+                            <p class="timeline-item__text">A dynamic, integrated contractor and solutions provider
+                                across East &amp; Central Africa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEGRATED APPROACH -->
+        <section class="venn-section">
+            <div class="container">
+                <div class="venn-section__header">
+                    <span class="section-label" style="color:rgba(255,255,255,0.5);">Our Model</span>
+                    <h2 class="section-title section-title--white reveal">Operational <span>Advantage</span></h2>
+                    <p class="reveal reveal-delay-1"
+                        style="color:rgba(255,255,255,0.65);margin:0.75rem auto 0;max-width:60ch;text-align:center;">
+                        KAICON operates at the intersection of three complementary sectors, supporting clients
+                        throughout the entire project lifecycle.</p>
+                </div>
+                <div class="venn-grid">
+                    <div class="venn-card reveal">
+                        <div class="venn-card__icon"><span class="material-symbols-outlined">hardware</span></div>
+                        <div class="venn-card__title">Industrial, Commodities &amp; Mineral Supply</div>
+                        <p class="venn-card__text">The raw materials backbone — sourcing critical minerals, chemical
+                            inputs, and agribusiness commodities that power manufacturing and industry.</p>
+                    </div>
+                    <div class="venn-card reveal reveal-delay-2">
+                        <div class="venn-card__icon"><span class="material-symbols-outlined">construction</span></div>
+                        <div class="venn-card__title">Infrastructure &amp; Construction Supply</div>
+                        <p class="venn-card__text">The execution arm — delivering complex civil works materials for
+                            commercial, government, and industrial facilities with precision.</p>
+                    </div>
+                    <div class="venn-card reveal reveal-delay-3">
+                        <div class="venn-card__icon"><span class="material-symbols-outlined">local_shipping</span></div>
+                        <div class="venn-card__title">Logistics &amp; Project Support</div>
+                        <p class="venn-card__text">The enabler — specialized logistics, fuel, and human capital
+                            solutions that keep remote, large-scale sites fully operational.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR PEOPLE -->
+        <section class="people-section">
+            <div class="container">
+                <div class="people-grid">
+                    <div>
+                        <div class="heading-block reveal">
+                            <span class="section-label">Local Commitment</span>
+                            <h2 class="section-title">Our <span>People</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1rem;">Our
+                            greatest asset is our team — engineers, project managers, logistics experts, and skilled
+                            artisans delivering global standards with local expertise.</p>
+                        <p class="reveal reveal-delay-2" style="color:#555;line-height:1.75;margin-bottom:2rem;">As a
+                            Tanzanian company, KAICON is committed to prioritizing local employment and skills transfer,
+                            building capacity within East Africa while maintaining the global delivery standards our
+                            clients rely on.</p>
+                        <a href="contact.html" class="btn btn-primary btn-arrow reveal reveal-delay-3">Work With Us</a>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <img src="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?w=900&q=80"
+                            alt="KAICON team"
+                            style="width:100%;border-radius:var(--radius-lg);object-fit:cover;aspect-ratio:4/3;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__inner">
+                    <div>
+                        <h2 class="cta-band__title">Partner With KAICON</h2>
+                        <p class="cta-band__sub">Reliable. Capable. Pan-African. Let's discuss your project.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-arrow">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider since
+                        2012.</p>
+                    <div class="footer__countries" style="margin-top:1.5rem;">
+                        <span class="footer__country-tag">Tanzania</span><span
+                            class="footer__country-tag">Burundi</span><span class="footer__country-tag">South
+                            Sudan</span><span class="footer__country-tag">Angola</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Operational Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Our Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="services.html#minerals" class="footer__link">Industrial &amp; Mineral Supply</a>
+                        </li>
+                        <li><a href="services.html#construction" class="footer__link">Infrastructure &amp;
+                                Construction</a></li>
+                        <li><a href="services.html#logistics" class="footer__link">Logistics &amp; Project Support</a>
+                        </li>
+                        <li><a href="services.html#agri" class="footer__link">Agribusiness &amp; Commodities</a></li>
+                        <li><a href="services.html#labor" class="footer__link">Labor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact Us</h4>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">location_on</span></span><span>Dar es Salaam,
+                            Tanzania</span></div>
+                    <div class="footer__contact-item"><span
+                            class="footer__contact-icon"><span class="material-symbols-outlined">mail</span></span><span>info@kaicon.co.tz</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">phone</span></span><span>+255 XXX XXX
+                            XXX</span></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+                <p class="footer__copy">Designed with excellence &amp; integrity.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+
+</html>

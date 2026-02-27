@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — KAICON | Portfolio of Completed Works</title>
+    <meta name="description"
+        content="Explore KAICON's project portfolio spanning government, commercial, and industrial sectors across East Africa." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        .portfolio-section {
+            padding: var(--sp-xl) 0;
+            background: var(--white);
+        }
+
+        .portfolio-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: var(--sp-md);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .portfolio-filters {
+            margin-bottom: var(--sp-lg);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio-stats {
+            background: var(--navy);
+            padding: var(--sp-lg) 0;
+        }
+
+        @media (max-width:1023px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:599px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar solid">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo/kaicon-logo.svg" alt="KAICON"
+                    style="filter:brightness(0) invert(1);" /></a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="projects.html" class="navbar__link active">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta"><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+            <button class="navbar__toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link">About</a>
+                <a href="services.html" class="navbar__mobile-link">Services</a>
+                <a href="projects.html" class="navbar__mobile-link active">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero__bg"
+                style="background-image:url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1800&q=80');">
+            </div>
+            <div class="page-hero__overlay"></div>
+            <div class="container page-hero__content">
+                <span class="page-hero__eyebrow">Our Work</span>
+                <h1 class="page-hero__title">Project <span>Portfolio</span></h1>
+                <p class="page-hero__subtitle">A track record of delivering complex, large-scale projects across
+                    government, commercial, and industrial sectors.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-stats">
+            <div class="container">
+                <div class="stats-strip">
+                    <div class="stat-item"><span class="stat-number" data-target="9" data-suffix="+">9+</span><span
+                            class="stat-label">Featured Projects</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="4">4</span><span
+                            class="stat-label">Countries</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="3">3</span><span
+                            class="stat-label">Sectors</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="10" data-suffix="+">10+</span><span
+                            class="stat-label">Years Delivering</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-header">
+                    <div class="heading-block reveal"><span class="section-label">Our Portfolio</span>
+                        <h2 class="section-title">Completed <span>Works</span></h2>
+                    </div>
+                </div>
+                <div class="portfolio-filters reveal">
+                    <div class="filter-bar">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="government">Government</button>
+                        <button class="filter-btn" data-filter="commercial">Commercial</button>
+                        <button class="filter-btn" data-filter="industrial">Industrial</button>
+                    </div>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="reveal">
+                        <div class="project-card" data-category="government">
+                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=700&q=80"
+                                alt="NIDA Data Centers" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Government</span>
+                                <h3 class="project-card__title">NIDA Data Centers</h3>
+                                <p class="project-card__client">National Identification Authority · Dar es Salaam,
+                                    Arusha, Mwanza</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="project-card" data-category="government">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80"
+                                alt="Tanzania Institute of Accountancy" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Government</span>
+                                <h3 class="project-card__title">Tanzania Institute of Accountancy</h3>
+                                <p class="project-card__client">TIA Infrastructure · Dar es Salaam, Tanzania</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="project-card" data-category="government">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&q=80"
+                                alt="ZISP Pemba Schools" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Government</span>
+                                <h3 class="project-card__title">ZISP — Pemba Schools</h3>
+                                <p class="project-card__client">Ministry of Education · Pemba Island, Tanzania</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="project-card" data-category="industrial">
+                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80"
+                                alt="Iringa Modern Market" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Industrial</span>
+                                <h3 class="project-card__title">Iringa Modern Market</h3>
+                                <p class="project-card__client">Iringa Municipal Council · Multi-story urban market
+                                    complex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="project-card" data-category="industrial">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80"
+                                alt="Shinyanga Abattoir" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Industrial</span>
+                                <h3 class="project-card__title">Shinyanga Abattoir</h3>
+                                <p class="project-card__client">Shinyanga Municipal Council · Industrial meat processing
+                                    facility</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="project-card" data-category="industrial">
+                            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=700&q=80"
+                                alt="Geita Power Station" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Industrial</span>
+                                <h3 class="project-card__title">Geita Power Station</h3>
+                                <p class="project-card__client">Power infrastructure · Geita Region, Tanzania</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="project-card" data-category="commercial">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                                alt="Peninsular Residence 5895" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Commercial</span>
+                                <h3 class="project-card__title">Peninsular Residence 5895</h3>
+                                <p class="project-card__client">7-Story luxury apartment complex · Oysterbay, Dar es
+                                    Salaam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="project-card" data-category="commercial">
+                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80"
+                                alt="Luanda Commercial Tower" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Commercial</span>
+                                <h3 class="project-card__title">Luanda Commercial Tower</h3>
+                                <p class="project-card__client">Mixed-use commercial development · Luanda, Angola</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="project-card" data-category="commercial">
+                            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=700&q=80"
+                                alt="Kigogo Mixed-Use Complex" class="project-card__img" />
+                            <div class="project-card__overlay"></div>
+                            <div class="project-card__body"><span class="project-card__tag">Commercial</span>
+                                <h3 class="project-card__title">Kigogo Mixed-Use Complex</h3>
+                                <p class="project-card__client">Mixed residential &amp; retail development · Dar es
+                                    Salaam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__inner">
+                    <div>
+                        <h2 class="cta-band__title">Your Project. Our Commitment.</h2>
+                        <p class="cta-band__sub">Let's discuss what KAICON can deliver for your next project.</p>
+                    </div><a href="contact.html" class="btn btn-outline btn-arrow">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div><img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider since
+                        2012.</p>
+                    <div class="footer__countries" style="margin-top:1.5rem;"><span
+                            class="footer__country-tag">Tanzania</span><span
+                            class="footer__country-tag">Burundi</span><span class="footer__country-tag">South
+                            Sudan</span><span class="footer__country-tag">Angola</span></div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="services.html#minerals" class="footer__link">Industrial &amp; Mineral Supply</a>
+                        </li>
+                        <li><a href="services.html#construction" class="footer__link">Construction Materials</a></li>
+                        <li><a href="services.html#logistics" class="footer__link">Logistics &amp; Support</a></li>
+                        <li><a href="services.html#agri" class="footer__link">Agribusiness</a></li>
+                        <li><a href="services.html#labor" class="footer__link">Labor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact</h4>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">location_on</span></span><span>Dar es Salaam,
+                            Tanzania</span></div>
+                    <div class="footer__contact-item"><span
+                            class="footer__contact-icon"><span class="material-symbols-outlined">mail</span></span><span>info@kaicon.co.tz</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span class="material-symbols-outlined">phone</span></span><span>+255 XXX XXX
+                            XXX</span></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+                <p class="footer__copy">Designed with excellence &amp; integrity.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+
+</html>

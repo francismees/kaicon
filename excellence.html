@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operational Excellence — KAICON | HSE, Equipment & People</title>
+    <meta name="description"
+        content="KAICON's commitment to operational excellence: zero-harm safety culture, state-of-the-art equipment, and world-class teams." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+        .exc-section {
+            padding: var(--sp-xl) 0;
+        }
+
+        .exc-section--grey {
+            background: var(--gypsum);
+        }
+
+        .exc-section--navy {
+            background: var(--navy);
+        }
+
+        .exc-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .exc-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-lg);
+            align-items: center;
+        }
+
+        .exc-icon-card {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--trans-normal), box-shadow var(--trans-normal);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .exc-icon-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .exc-icon-card__title {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 1rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .exc-icon-card__text {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .equipment-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .equipment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* icon now inline in HTML */
+
+        .exc-img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width:1023px) {
+            .exc-grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .exc-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .equipment-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar solid">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo/kaicon-logo.svg" alt="KAICON"
+                    style="filter:brightness(0) invert(1);" /></a>
+            <ul class="navbar__links" role="list">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="projects.html" class="navbar__link">Projects</a></li>
+                <li><a href="excellence.html" class="navbar__link active">Excellence</a></li>
+            </ul>
+            <div class="navbar__cta"><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+            <button class="navbar__toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="navbar__mobile">
+        <div class="container">
+            <nav class="navbar__mobile-links">
+                <a href="index.html" class="navbar__mobile-link">Home</a>
+                <a href="about.html" class="navbar__mobile-link">About</a>
+                <a href="services.html" class="navbar__mobile-link">Services</a>
+                <a href="projects.html" class="navbar__mobile-link">Projects</a>
+                <a href="excellence.html" class="navbar__mobile-link active">Excellence</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero__bg"
+                style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80');">
+            </div>
+            <div class="page-hero__overlay"></div>
+            <div class="container page-hero__content">
+                <span class="page-hero__eyebrow">How We Perform</span>
+                <h1 class="page-hero__title">Operational <span>Excellence</span></h1>
+                <p class="page-hero__subtitle">Downtime is not an option. Our commitment to safety, technology, and
+                    people underpins every project we deliver.</p>
+            </div>
+        </section>
+
+        <!-- HSE -->
+        <section class="exc-section">
+            <div class="container">
+                <div class="heading-block reveal"><span class="section-label">Health, Safety &amp;
+                        Environment</span>
+                    <h2 class="section-title">Zero Harm <span>Culture</span></h2>
+                </div>
+                <p class="reveal reveal-delay-1"
+                    style="color:#555;line-height:1.75;margin-bottom:var(--sp-md);max-width:70ch;">KAICON operates under
+                    a
+                    rigorous Health, Safety &amp; Environment framework. Our zero-harm culture is embedded from
+                    the boardroom to the worksite — safety is never negotiated.</p>
+                <div class="exc-grid-3" style="margin-top:0;">
+                    <div class="exc-icon-card reveal">
+                        <div class="icon-circle" style="width:60px;height:60px;"><span class="material-symbols-outlined"
+                                style="font-size:1.6rem;">health_and_safety</span></div>
+                        <div class="exc-icon-card__title">Safety First</div>
+                        <p class="exc-icon-card__text">Mandatory site safety briefings, PPE compliance, and
+                            near-miss reporting across all operations.</p>
+                    </div>
+                    <div class="exc-icon-card reveal reveal-delay-2">
+                        <div class="icon-circle" style="width:60px;height:60px;"><span class="material-symbols-outlined"
+                                style="font-size:1.6rem;">eco</span></div>
+                        <div class="exc-icon-card__title">Environmental</div>
+                        <p class="exc-icon-card__text">Committed to minimal environmental impact — responsible
+                            extraction, waste management, and land rehabilitation.</p>
+                    </div>
+                    <div class="exc-icon-card reveal reveal-delay-3">
+                        <div class="icon-circle" style="width:60px;height:60px;"><span class="material-symbols-outlined"
+                                style="font-size:1.6rem;">assignment</span></div>
+                        <div class="exc-icon-card__title">Compliance</div>
+                        <p class="exc-icon-card__text">Full regulatory compliance with Tanzanian and regional
+                            HSE standards on every engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPMENT -->
+        <section class="exc-section exc-section--navy">
+            <div class="container">
+                <div class="heading-block reveal" style="border-left-color:rgba(255,255,255,0.3);">
+                    <span class="section-label" style="color:rgba(255,255,255,0.5);">Fleet &amp; Technology</span>
+                    <h2 class="section-title section-title--white">Equipment &amp; <span>Technology</span></h2>
+                </div>
+                <p class="reveal reveal-delay-1"
+                    style="color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:var(--sp-md);max-width:70ch;">Our
+                    modern fleet and technology infrastructure ensures we can mobilize rapidly, operate reliably in
+                    remote locations, and deliver at scale.</p>
+                <div class="equipment-list reveal reveal-delay-2">
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">local_gas_station</span>Mobile Fuel Dispensers
+                        (42,000L capacity)</div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">warehouse</span>Extra Fuel Storage Infrastructure
+                    </div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">precision_manufacturing</span>Excavators &amp;
+                        Graders</div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">forklift</span>Mobile Cranes &amp; Lifting Equipment
+                    </div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">local_shipping</span>Heavy-duty Transport Fleet</div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">wc</span>Mobile Ablution Units</div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">holiday_village</span>Camp &amp; Site Office Units
+                    </div>
+                    <div class="equipment-item"><span class="material-symbols-outlined"
+                            style="font-size:1.1rem;opacity:0.75;">fingerprint</span>Automated Time &amp; Attendance
+                        Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEOPLE -->
+        <section class="exc-section exc-section--grey">
+            <div class="container">
+                <div class="exc-grid-2">
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?w=900&q=80"
+                            alt="KAICON team of professionals" class="exc-img" />
+                    </div>
+                    <div>
+                        <div class="heading-block reveal"><span class="section-label">Our Team</span>
+                            <h2 class="section-title">Our <span>People</span></h2>
+                        </div>
+                        <p class="reveal reveal-delay-1" style="color:#555;line-height:1.75;margin-bottom:1rem;">Our
+                            greatest asset is our team. Engineers, project managers, logistics experts, and skilled
+                            artisans — all committed to delivering world-class outcomes on every project.</p>
+                        <p class="reveal reveal-delay-2"
+                            style="color:#555;line-height:1.75;margin-bottom:var(--sp-md);">KAICON is committed to local
+                            employment and skills transfer. We build capacity within East Africa's workforce while
+                            maintaining the global standards our clients demand.</p>
+                        <div class="exc-grid-3" style="gap:1rem; margin-top:0;">
+                            <div style="text-align:center;" class="reveal">
+                                <div
+                                    style="font-family:var(--font-heading);font-weight:900;font-size:1.8rem;color:var(--red);">
+                                    100%</div>
+                                <div
+                                    style="font-family:var(--font-body);font-size:0.8rem;color:#888;letter-spacing:0.08em;text-transform:uppercase;">
+                                    Local Priority</div>
+                            </div>
+                            <div style="text-align:center;" class="reveal reveal-delay-2">
+                                <div
+                                    style="font-family:var(--font-heading);font-weight:900;font-size:1.8rem;color:var(--red);">
+                                    Global</div>
+                                <div
+                                    style="font-family:var(--font-body);font-size:0.8rem;color:#888;letter-spacing:0.08em;text-transform:uppercase;">
+                                    Standards</div>
+                            </div>
+                            <div style="text-align:center;" class="reveal reveal-delay-3">
+                                <div
+                                    style="font-family:var(--font-heading);font-weight:900;font-size:1.8rem;color:var(--red);">
+                                    Zero</div>
+                                <div
+                                    style="font-family:var(--font-body);font-size:0.8rem;color:#888;letter-spacing:0.08em;text-transform:uppercase;">
+                                    Compromise</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-band__inner">
+                    <div>
+                        <h2 class="cta-band__title">Built to Deliver. Everywhere.</h2>
+                        <p class="cta-band__sub">Ready to partner with a team that holds itself to the highest standard?
+                        </p>
+                    </div><a href="contact.html" class="btn btn-outline btn-arrow">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top-bar"></div>
+        <div class="container">
+            <div class="footer__grid">
+                <div><img src="assets/logo/kaicon-logo.svg" alt="KAICON" class="footer__logo" />
+                    <div class="footer__tagline">Fostering Development &amp; Empowering Industries</div>
+                    <p class="footer__desc">East Africa's premier integrated contractor and solutions provider since
+                        2012.</p>
+                    <div class="footer__countries" style="margin-top:1.5rem;"><span
+                            class="footer__country-tag">Tanzania</span><span
+                            class="footer__country-tag">Burundi</span><span class="footer__country-tag">South
+                            Sudan</span><span class="footer__country-tag">Angola</span></div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="excellence.html" class="footer__link">Excellence</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Services</h4>
+                    <ul class="footer__links" role="list">
+                        <li><a href="services.html#minerals" class="footer__link">Industrial &amp; Mineral Supply</a>
+                        </li>
+                        <li><a href="services.html#construction" class="footer__link">Construction Materials</a></li>
+                        <li><a href="services.html#logistics" class="footer__link">Logistics &amp; Support</a></li>
+                        <li><a href="services.html#agri" class="footer__link">Agribusiness</a></li>
+                        <li><a href="services.html#labor" class="footer__link">Labor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Contact</h4>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">location_on</span></span><span>Dar es Salaam,
+                            Tanzania</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">mail</span></span><span>info@kaicon.co.tz</span></div>
+                    <div class="footer__contact-item"><span class="footer__contact-icon"><span
+                                class="material-symbols-outlined">phone</span></span><span>+255 XXX XXX
+                            XXX</span></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 <span class="footer__copy-red">KAICON</span>. All rights reserved.
+                </p>
+                <p class="footer__copy">Designed with excellence &amp; integrity.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+
+</html>

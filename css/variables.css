@@ -1,0 +1,49 @@
+/* ===========================
+   DESIGN TOKENS
+   =========================== */
+:root {
+    /* Colors */
+    --navy: #003B71;
+    --navy-dark: #002a52;
+    --navy-light: #0d4d8a;
+    --red: #CE0E2D;
+    --red-dark: #a80b24;
+    --grey: #D9D9D6;
+    --grey-dark: #9e9e9c;
+    --gypsum: #F5F5F0;
+    --white: #FFFFFF;
+    --black: #1A1A1A;
+    --overlay-navy: rgba(0, 59, 113, 0.82);
+    --overlay-red: rgba(206, 14, 45, 0.80);
+    --overlay-dark: rgba(10, 10, 10, 0.65);
+
+    /* Typography */
+    --font-heading: 'Eurostile Extd', 'Eurostile', 'Arial Black', sans-serif;
+    --font-body: 'Satoshi', 'Satoshi Medium', 'Inter', sans-serif;
+
+    /* Spacing scale */
+    --sp-xs: 0.5rem;
+    --sp-sm: 1rem;
+    --sp-md: 2rem;
+    --sp-lg: 4rem;
+    --sp-xl: 6rem;
+    --sp-xxl: 9rem;
+
+    /* Layout */
+    --container: 1280px;
+    --radius: 4px;
+    --radius-lg: 8px;
+
+    /* Transitions */
+    --trans-fast: 0.2s ease;
+    --trans-normal: 0.35s ease;
+    --trans-slow: 0.65s ease;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.10);
+    --shadow-md: 0 6px 32px rgba(0, 0, 0, 0.16);
+    --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.22);
+
+    /* Nav height */
+    --nav-h: 76px;
+}
